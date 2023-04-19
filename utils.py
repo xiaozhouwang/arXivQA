@@ -51,7 +51,7 @@ def arxiv_data_generator(path="../data/arxiv-metadata-oai-snapshot.json"):
             except:
                 continue
 
-@st.cache_data
+@st.cache_resource
 def get_data_embed():
     if Path("../data/paper_list.pk").is_file():
         data_list = pickle.load(open("../data/paper_list.pk", "rb"))
